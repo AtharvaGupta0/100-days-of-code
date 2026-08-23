@@ -1,6 +1,5 @@
-Q30: Write a program to reverse a given number.
+/* Q30: Write a program to reverse a given number.
 
-/*
 Sample Test Cases:
 Input 1:
 1234
