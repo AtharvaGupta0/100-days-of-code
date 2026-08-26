@@ -15,18 +15,16 @@ Output 2:
 
 #include <stdio.h>
 
-int main()
-{
-    int n, i, product = 1;
+int main() {
+  int n, i, product = 1;
+  printf("Enter a number: ");
+  scanf("%d", &n);
 
-    scanf("%d", &n);
+  for (i = 2; i <= n; i = i + 2) {
+    product = product * i;
+  }
 
-    for(i = 2; i <= n; i = i + 2)
-    {
-        product = product * i;
-    }
+  printf("%d", product);
 
-    printf("%d", product);
-
-    return 0;
+  return 0;
 }

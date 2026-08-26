@@ -15,20 +15,18 @@ Output 2:
 
 #include <stdio.h>
 
-int main()
-{
-    int n, reverse = 0, digit;
+int main() {
+  int n, reverse = 0, digit;
+  printf("Enter a number: ");
+  scanf("%d", &n);
 
-    scanf("%d", &n);
+  while (n != 0) {
+    digit = n % 10;
+    reverse = reverse * 10 + digit;
+    n = n / 10;
+  }
 
-    while(n != 0)
-    {
-        digit = n % 10;
-        reverse = reverse * 10 + digit;
-        n = n / 10;
-    }
+  printf("%d", reverse);
 
-    printf("%d", reverse);
-
-    return 0;
+  return 0;
 }

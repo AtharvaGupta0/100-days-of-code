@@ -15,18 +15,16 @@ Output 2:
 
 #include <stdio.h>
 
-int main()
-{
-    int n, i, sum = 0;
+int main() {
+  int n, i, sum = 0;
+  printf("Enter a number: ");
+  scanf("%d", &n);
 
-    scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    sum = sum + (2 * i - 1);
+  }
 
-    for(i = 1; i <= n; i++)
-    {
-        sum = sum + (2 * i - 1);
-    }
+  printf("%d", sum);
 
-    printf("%d", sum);
-
-    return 0;
+  return 0;
 }

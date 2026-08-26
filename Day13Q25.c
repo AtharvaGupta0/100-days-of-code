@@ -21,6 +21,7 @@ Output 3:
 
 #include <stdio.h>
 int main() {
+  printf("Enter two numbers and an operator: ");
   int a, b;
   char op;
   scanf("%d %d %c", &a, &b, &op);

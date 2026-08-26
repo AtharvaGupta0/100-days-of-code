@@ -15,19 +15,17 @@ Output 2:
 
 #include <stdio.h>
 
-int main()
-{
-    int n, i;
-    int factorial = 1;
+int main() {
+  int n, i;
+  int factorial = 1;
+  printf("Enter a number: ");
+  scanf("%d", &n);
 
-    scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    factorial = factorial * i;
+  }
 
-    for(i = 1; i <= n; i++)
-    {
-        factorial = factorial * i;
-    }
+  printf("%d", factorial);
 
-    printf("%d", factorial);
-
-    return 0;
+  return 0;
 }

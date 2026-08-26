@@ -23,6 +23,7 @@ Bill: ₹1700
 #include <stdio.h>
 int main() {
   int units;
+  printf("Enter the number of units: ");
   scanf("%d", &units);
   if (units <= 100) {
     printf("Bill: ₹%d", units * 5);
