@@ -20,7 +20,7 @@ int main() {
     printf("Enter a binary number: ");
     scanf("%s", binary);
 
-    for (int i = 0; binary[i] != '\0'; i++) {
+    for (int i = 0; binary[i]; i++) {
         if (binary[i] == '0') binary[i] = '1';
         else if (binary[i] == '1') binary[i] = '0';
     }
