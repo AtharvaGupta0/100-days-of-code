@@ -1,12 +1,12 @@
-/* Q66: Insert an element in a sorted array at the appropriate position.
+/* Q68: Delete an element from an array.
 
 Sample Test Cases:
 Input 1:
 5
-1 2 4 5 6
-3
+1 2 3 4 5
+2
 Output 1:
-1 2 3 4 5 6
+1 2 4 5
 
 */
 #include <stdio.h>
@@ -19,19 +19,18 @@ int main() {
     printf("Enter %d element: ", i + 1);
     scanf("%d", &arr[i]);
   }
-  printf("Enter the element to insert: ");
-  int insert;
-  scanf("%d", &insert);
+  printf("Enter the element to delete: ");
+  int delete;
+  scanf("%d", &delete);
   for (int i = 0; i < n; i++) {
-    if (arr[i] > insert) {
-      for (int j = n; j > i; j--) {
-        arr[j] = arr[j - 1];
+    if (arr[i] == delete) {
+      for (int j = i; j < n - 1; j++) {
+        arr[j] = arr[j + 1];
       }
-      arr[i] = insert;
       break;
     }
   }
-  for (int i = 0; i < n + 1; i++) {
+  for (int i = 0; i < n - 1; i++) {
     printf("%d ", arr[i]);
   }
   return 0;

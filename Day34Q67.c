@@ -1,12 +1,12 @@
-/* Q66: Insert an element in a sorted array at the appropriate position.
+/* Q67: Insert an element in an array at a given position.
 
 Sample Test Cases:
 Input 1:
-5
-1 2 4 5 6
-3
+4
+10 20 30 40
+2 15
 Output 1:
-1 2 3 4 5 6
+10 20 15 30 40
 
 */
 #include <stdio.h>
@@ -22,15 +22,13 @@ int main() {
   printf("Enter the element to insert: ");
   int insert;
   scanf("%d", &insert);
-  for (int i = 0; i < n; i++) {
-    if (arr[i] > insert) {
-      for (int j = n; j > i; j--) {
-        arr[j] = arr[j - 1];
-      }
-      arr[i] = insert;
-      break;
-    }
+  printf("Enter the position to insert: ");
+  int pos;
+  scanf("%d", &pos);
+  for (int i = n; i > pos; i--) {
+    arr[i] = arr[i - 1];
   }
+  arr[pos] = insert;
   for (int i = 0; i < n + 1; i++) {
     printf("%d ", arr[i]);
   }
