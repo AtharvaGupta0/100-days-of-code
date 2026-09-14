@@ -24,9 +24,9 @@ int main() {
     if (arr[i] > max) {
       second_max = max;
       max = arr[i];
-    } else if (arr[i] > second_max && arr[i] != max) {
-      second_max = arr[i];
-    }
+    } // else if (arr[i] > second_max && arr[i] != max) {
+      // second_max = arr[i];
+    //}
   }
   printf("The second largest element is %d", second_max);
   return 0;
