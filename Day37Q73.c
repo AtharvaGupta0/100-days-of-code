@@ -24,6 +24,7 @@ int main() {
     }
   }
   for (int i = 0; i < r; i++) {
+    sum[i] = 0;
     for (int j = 0; j < c; j++) {
       sum[i] += arr[i][j];
     }
