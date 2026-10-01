@@ -18,4 +18,4 @@ int main() {
     printf("%c\n", str[i]);
   }
   return 0;
-}
+} 
