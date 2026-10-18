@@ -1,29 +1,9 @@
-/* Q96: Print all sub-strings of a string.
+/* Q96: Reverse each word in a sentence without changing the word order.
+
 Sample Test Cases:
 Input 1:
-abc
+I love coding
 Output 1:
-a,ab,abc,b,bc,c
+I evol gnidoc
 
 */
-
-#include <stdio.h>
-#include <string.h>
-
-int main() {
-    char str[100];
-    printf("Enter a string: ");
-    scanf("%s", str);
-    int len = strlen(str);
-    printf("Substrings are: ");
-    for(int i= 0; i <len; i++){
-        char sub[100];
-        for ( int j = 0; j<len-i; j++){
-            sub[j]= str[i+j];
-            sub[j+1] = '\0';
-            printf("%s,",sub);
-        }
-
-    }
-    return 0;
-}
