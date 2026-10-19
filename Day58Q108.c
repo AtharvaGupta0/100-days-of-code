@@ -16,6 +16,35 @@ Follow-up(optional): Can you write a code that runs in O(n) time and without usi
 #include <stdio.h>
 
 int main() {
-    // Your code here
+    printf("Enter the size of the array: ");
+    int n;
+    scanf("%d", &n);
+
+    int nums[n];
+    printf("Enter the elements of the array:\n");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &nums[i]);
+    }
+
+    int answer[n];
+    for (int i = 0; i < n; i++) {
+        int prod = 1;
+        for (int j = 0; j < n; j++) {
+            if (j != i) {
+                prod *= nums[j];
+            }
+        }
+        answer[i] = prod;
+    }
+
+    printf("[");
+    for (int i = 0; i < n; i++) {
+        printf("%d", answer[i]);
+        if (i < n - 1) {
+            printf(",");
+        }
+    }
+    printf("]");
+
     return 0;
 }
