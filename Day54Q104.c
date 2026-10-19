@@ -24,6 +24,23 @@ Follow-up 1 (optional): Can you do it in O(log n) Time Complexity? Follow-up 2 (
 #include <stdio.h>
 
 int main() {
-    // Your code here
+    printf("Enter the value of n: ");
+    int n;
+    scanf("%d", &n);
+
+    int total = n * (n + 1) / 2;
+    int pivot = -1;
+
+    for (int x = 1; x <= n; x++) {
+        int left = x * (x + 1) / 2;
+        int right = total - (x - 1) * x / 2;
+        if (left == right) {
+            pivot = x;
+            break;
+        }
+    }
+
+    printf("%d", pivot);
+
     return 0;
 }
