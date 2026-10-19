@@ -22,6 +22,34 @@ Explanation: Window [12, 1, 3] No negative integers, output is 0. Window [1, 3, 
 #include <stdio.h>
 
 int main() {
-    // Your code here
+    printf("Enter the size of the array: ");
+    int n;
+    scanf("%d", &n);
+
+    int arr[n];
+    printf("Enter the elements of the array:\n");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    int k;
+    printf("Enter the value of k: ");
+    scanf("%d", &k);
+
+    for (int i = 0; i <= n - k; i++) {
+        int neg = 0;
+        for (int j = i; j < i + k; j++) {
+            if (arr[j] < 0) {
+                neg = arr[j];
+                break;
+            }
+        }
+        if (i == 0) {
+            printf("%d", neg);
+        } else {
+            printf(" %d", neg);
+        }
+    }
+
     return 0;
 }
