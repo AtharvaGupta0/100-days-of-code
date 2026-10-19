@@ -22,6 +22,34 @@ Explanation: arr[3] = 400, which is maximum.
 #include <stdio.h>
 
 int main() {
-    // Your code here
+    printf("Enter the size of the array: ");
+    int n;
+    scanf("%d", &n);
+
+    int arr[n];
+    printf("Enter the elements of the array:\n");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    int k;
+    printf("Enter the value of k: ");
+    scanf("%d", &k);
+
+    int max_sum = 0;
+    for (int i = 0; i < k; i++) {
+        max_sum += arr[i];
+    }
+
+    int window_sum = max_sum;
+    for (int i = k; i < n; i++) {
+        window_sum += arr[i] - arr[i - k];
+        if (window_sum > max_sum) {
+            max_sum = window_sum;
+        }
+    }
+
+    printf("%d", max_sum);
+
     return 0;
 }
