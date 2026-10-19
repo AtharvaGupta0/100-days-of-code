@@ -29,6 +29,30 @@ Try solving this using brute force (nested loop). No need of attempting the opti
 #include <stdio.h>
 
 int main() {
-    // Your code here
+    printf("Enter the size of the array: ");
+    int n;
+    scanf("%d", &n);
+
+    int arr[n];
+    printf("Enter the elements of the array:\n");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    for (int i = 0; i < n; i++) {
+        int prev = -1;
+        for (int j = i - 1; j >= 0; j--) {
+            if (arr[j] > arr[i]) {
+                prev = arr[j];
+                break;
+            }
+        }
+        if (i == n - 1) {
+            printf("%d", prev);
+        } else {
+            printf("%d, ", prev);
+        }
+    }
+
     return 0;
 }
