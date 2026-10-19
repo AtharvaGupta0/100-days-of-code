@@ -16,6 +16,33 @@ Explanation: When k = 1, each element in the array is its own subarray, so the o
 #include <stdio.h>
 
 int main() {
-    // Your code here
+    printf("Enter the size of the array: ");
+    int n;
+    scanf("%d", &n);
+
+    int arr[n];
+    printf("Enter the elements of the array:\n");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    int k;
+    printf("Enter the value of k: ");
+    scanf("%d", &k);
+
+    for (int i = 0; i <= n - k; i++) {
+        int max = arr[i];
+        for (int j = i + 1; j < i + k; j++) {
+            if (arr[j] > max) {
+                max = arr[j];
+            }
+        }
+        if (i == 0) {
+            printf("%d", max);
+        } else {
+            printf(" %d", max);
+        }
+    }
+
     return 0;
 }
