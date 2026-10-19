@@ -33,6 +33,30 @@ Try solving this using brute force (nested loop). No need of attempting the opti
 #include <stdio.h>
 
 int main() {
-    // Your code here
+    printf("Enter the size of the array: ");
+    int n;
+    scanf("%d", &n);
+
+    int arr[n];
+    printf("Enter the elements of the array:\n");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    for (int i = 0; i < n; i++) {
+        int next = -1;
+        for (int j = i + 1; j < n; j++) {
+            if (arr[j] > arr[i]) {
+                next = arr[j];
+                break;
+            }
+        }
+        if (i == n - 1) {
+            printf("%d", next);
+        } else {
+            printf("%d, ", next);
+        }
+    }
+
     return 0;
 }
