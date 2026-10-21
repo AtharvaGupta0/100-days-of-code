@@ -14,7 +14,7 @@ int main() {
   char str[100];
   printf("Enter your string: ");
   fgets(str, sizeof(str), stdin);
-  for (int i = 0; str[i] != 0; i++) {
+  for (int i = 0; str[i] != '\0'; i++) {
     if (str[i] == str[i + 1]) {
       printf("%c\n", str[i]);
       return 0;

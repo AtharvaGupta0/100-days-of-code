@@ -24,7 +24,6 @@ Follow-up(optional): Can you do it in O(log n) Time Complexity?
 */
 
 #include <stdio.h>
-// #include <stdlib.h>
 
 int main() {
   printf("Enter the size of the array: ");
@@ -55,7 +54,7 @@ int main() {
     }
   }
 
-  printf("%d,%d", first, last);
+  printf("%d,%d\n", first, last);
 
   return 0;
 }
