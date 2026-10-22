@@ -19,3 +19,24 @@ Output 3:
 1
 
 */
+
+#include <stdio.h>
+int main() {
+  int n, rep, repi;
+  rep = 0;
+  printf("Enter the size of the array: ");
+  scanf("%d", &n);
+  int arr[n];
+  for (int i = 0; i < n; i++) {
+    printf("Enter the %d element: ", i);
+    scanf("%d", &arr[i]);
+    if (i != 0 && arr[i] == arr[i - 1]) {
+      rep++;
+      repi = i;
+    }
+  }
+  if (rep > 0) {
+    printf("%d", arr[repi]);
+  }
+  return 0;
+}
