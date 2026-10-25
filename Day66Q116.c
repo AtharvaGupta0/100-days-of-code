@@ -22,3 +22,28 @@ Output 3:
 0 1
 
 */
+#include <stdio.h>
+int main() {
+  int n, target;
+  printf("Enter the size of the array: ");
+  scanf("%d", &n);
+  int nums[n];
+  for (int i = 0; i < n; i++) {
+    printf("Enter element %d: ", i + 1);
+    scanf("%d", &nums[i]);
+  }
+  printf("Enter the target: ");
+  scanf("%d", &target);
+
+  for (int i = 0; i < n; i++) {
+    for (int j = i + 1; j < n; j++) {
+      if (nums[i] + nums[j] == target) {
+        printf("%d %d\n", i, j);
+        return 0;
+      }
+    }
+
+    printf("-1 -1\n");
+    return 0;
+  }
+}

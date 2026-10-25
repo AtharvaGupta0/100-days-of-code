@@ -19,3 +19,43 @@ Output 3:
 -10 -3 -2 -1 7 7
 
 */
+#include <stdio.h>
+int main() {
+  int m, n;
+  printf("Enter the size of the first array: ");
+  scanf("%d", &m);
+  printf("Enter the size of the second array: ");
+  scanf("%d", &n);
+
+  int nums1[m], nums2[n], merged[m + n];
+
+  for (int i = 0; i < m; i++) {
+    printf("Enter element %d of the first array: ", i + 1);
+    scanf("%d", &nums1[i]);
+  }
+  for (int i = 0; i < n; i++) {
+    printf("Enter element %d of the second array: ", i + 1);
+    scanf("%d", &nums2[i]);
+  }
+
+  int i = 0, j = 0, k = 0;
+  while (i < m && j < n) {
+    if (nums1[i] <= nums2[j]) {
+      merged[k++] = nums1[i++];
+    } else {
+      merged[k++] = nums2[j++];
+    }
+  }
+  while (i < m) {
+    merged[k++] = nums1[i++];
+  }
+  while (j < n) {
+    merged[k++] = nums2[j++];
+  }
+
+  for (int x = 0; x < m + n; x++) {
+    printf("%d ", merged[x]);
+  }
+
+  return 0;
+}
